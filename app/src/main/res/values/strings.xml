@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pinterview</string>
+
+    <string name="title_practice">면접 연습하기</string>
+    <string name="subtitle_practice">기업 면접 질문을\n선택해서 연습해보세요!!</string>
+    <string name="practice">연습하기</string>
+
+    <string name="title_check_records">답변 조회하기</string>
+    <string name="subtitle_check_records">내가 연습한 답변을\n확인해봐요.</string>
+    <string name="check">조회하기</string>
+
+    <string name="title_register_question">면접 질문 등록하기</string>
+    <string name="subtitle_register_question">최근 기업의 질문을 등록하고\n연습해보세요!</string>
+    <string name="register">등록하기</string>
+
+    <string name="title_edit_question">면접 질문 편집하기</string>
+    <string name="subtitle_edit_question">면접 질문을 언제든지\n수정하고 삭제할 수 있어요.</string>
+    <string name="edit">수정하기</string>
+
+    <string name="expire_time_format" formatted="true">(제한시간: %d초)</string>
+    <string name="practice_date_format" formatted="true">(%s 연습 기록)</string>
+
+</resources>

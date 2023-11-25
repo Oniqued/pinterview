@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".questions.RegisterActivity">
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="질문 등록하기"
+            android:textSize="24dp"
+            android:fontFamily="@font/pyeongchang_bold"
+            android:gravity="center"
+            android:paddingVertical="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imageview_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/btn_back"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="@id/textview_title"
+            app:layout_constraintBottom_toBottomOf="@id/textview_title"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/textview_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="먼접 질문 작성"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/pyeongchang_bold"
+            app:layout_constraintTop_toBottomOf="@id/textview_title"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edittext_question"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="2.4:1"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="12dp"
+            android:textSize="14dp"
+            android:hint="등록할 면접 질문을 입력해주세요."
+            android:gravity="start|top"
+            android:fontFamily="@font/pyeongchang_regular"
+            android:background="@drawable/rectangle_blackstroke_10dp"
+            app:layout_constraintTop_toBottomOf="@id/textview_subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기업명"
+            android:textSize="16dp"
+            android:fontFamily="@font/pyeongchang_bold"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@id/edittext_question"
+            app:layout_constraintStart_toStartOf="@id/edittext_question"/>
+
+        <EditText
+            android:id="@+id/edittext_company_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="12dp"
+            android:textSize="14dp"
+            android:lines="1"
+            android:hint="기업 이름을 입력해주세요."
+            android:fontFamily="@font/pyeongchang_regular"
+            android:background="@drawable/rectangle_blackstroke_10dp"
+            app:layout_constraintTop_toBottomOf="@id/textview_company_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_expired_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제한시간"
+            android:textSize="16dp"
+            android:fontFamily="@font/pyeongchang_bold"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@id/edittext_company_name"
+            app:layout_constraintStart_toStartOf="@id/edittext_company_name"/>
+
+        <EditText
+            android:id="@+id/edittext_expired_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="12dp"
+            android:textSize="14dp"
+            android:lines="1"
+            android:inputType="number"
+            android:hint="제한시간을 입력해주세요. (초 단위)"
+            android:fontFamily="@font/pyeongchang_regular"
+            android:background="@drawable/rectangle_blackstroke_10dp"
+            app:layout_constraintTop_toBottomOf="@id/textview_expired_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_time_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(초)"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/pyeongchang_regular"
+            app:layout_constraintTop_toTopOf="@id/edittext_expired_time"
+            app:layout_constraintBottom_toBottomOf="@id/edittext_expired_time"
+            app:layout_constraintEnd_toEndOf="@id/edittext_expired_time" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@id/edittext_expired_time"
+            app:layout_constraintStart_toStartOf="@id/edittext_company_name"
+            app:layout_constraintEnd_toEndOf="@id/edittext_company_name">
+
+
+            <RadioButton
+                android:id="@+id/button_personality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="인적성"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textColor="@color/selector_black_white"
+                android:background="@drawable/selector_gray_green_10dp"
+                android:fontFamily="@font/pyeongchang_bold"
+                android:button="@null"/>
+
+            <RadioButton
+                android:id="@+id/button_duty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="직무"
+                android:textAlignment="center"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/selector_black_white"
+                android:background="@drawable/selector_gray_green_10dp"
+                android:fontFamily="@font/pyeongchang_bold"
+                android:button="@null"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textview_complete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="등록하기"
+            android:paddingVertical="15dp"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/rectangle_green_26dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pyeongchang_bold"
+            app:layout_constraintTop_toBottomOf="@id/radiogroup_category"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/edittext_question"
+            app:layout_constraintEnd_toEndOf="@id/edittext_question"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
